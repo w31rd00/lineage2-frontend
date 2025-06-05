@@ -1,0 +1,56 @@
+:host {
+    display: block;
+    min-height: 100vh;
+    background-image: url('../../public/lineage-2-sign-in.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sign-in-container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+  }
+
+  .signin-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .signin-box form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signin-box input {
+    margin: 8px 0;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+  }
+  
+  .signin-box button {
+    margin-top: 12px;
+    padding: 10px;
+    font-size: 15px;
+    background-color: #4b79a1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signin-box button:hover {
+    background-color: #3c6589;
+  }
+  
+  

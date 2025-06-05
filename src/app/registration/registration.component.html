@@ -1,0 +1,51 @@
+<div class="signup-container">
+  <div class="signup-box">
+    <!-- <div *ngIf="successMessage" class="success-message">
+      {{ successMessage }}
+    </div>
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div> -->
+    <h2>{{'SIGN_UP' | translate}}</h2>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+
+      <!-- Username -->
+      <div>
+        <input formControlName="username" placeholder="{{'USERNAME_LABEL' | translate}}" />
+        <div class="error" *ngIf="isInvalid('username')">
+          {{'USERNAME_LABEL_ERROR' | translate}}
+        </div>
+      </div>
+    
+      <!-- Email -->
+      <div>
+        <input formControlName="email" placeholder="{{'EMAIL' | translate}}" type="email" />
+        <div class="error" *ngIf="isInvalid('email')">
+          <span *ngIf="signupForm.controls['email'].errors?.['required']">{{'EMAIL_REQUIRED' | translate}}</span>
+          <span *ngIf="signupForm.controls['email'].errors?.['email']">{{'EMAIL_VALID' | translate}}</span>
+        </div>
+      </div>
+    
+      <!-- Password -->
+      <div>
+        <input formControlName="password" placeholder="{{'PASSWORD_LABEL' | translate}}" type="password" />
+        <div class="error" *ngIf="isInvalid('password')">
+          {{'PASSWORD_REQUIRED' | translate}}
+        </div>
+      </div>
+    
+      <!-- Confirm Password -->
+      <div>
+        <input formControlName="confirmPassword" placeholder="{{'PASSWORD_CONFIRM' | translate}}" type="password" />
+        <div class="error" *ngIf="isInvalid('confirmPassword')">
+          {{'PASSWORD_CONFIRM' | translate}}
+        </div>
+        <div class="error" *ngIf="signupForm.errors?.['passwordMismatch'] && signupForm.get('confirmPassword')?.touched">
+          {{'PASSWORDS_DO_NOT_MATCH' | translate}}
+        </div>
+      </div>
+    
+      <button type="submit">{{'SIGN_UP' | translate}}</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<nav class="main-header">
+    <div class="logo">
+      <a routerLink="/">Lineage 2</a>
+    </div>
+  
+    <ul class="menu">
+      <li><a routerLink="/about">{{ 'ABOUT_GAME' | translate }}</a></li>
+      <li><a routerLink="/donate">{{ 'DONATE' | translate }}</a></li>
+      <li><a routerLink="/news">{{ 'NEWS' | translate }}</a></li>
+      <li><a routerLink="/contact">{{ 'CONTACT' | translate }}</a></li>
+      <li><a routerLink="/bug-report">{{ 'BUG_REPORT' | translate }}</a></li>
+    </ul>
+  
+    <div class="auth-buttons">
+      <button *ngIf="!authService.isLoggedIn()" [routerLink]="['/sign-in']">{{'SIGN_IN' | translate}}</button>
+      <button *ngIf="!authService.isLoggedIn()" [routerLink]="['/sign-up']" class="btn-primary">{{'SIGN_UP' | translate}}</button>
+
+      <button *ngIf="authService.isLoggedIn()" [routerLink]="['/account']">{{'ACCOUNT' | translate}}</button>
+      <button *ngIf="authService.isLoggedIn()" (click)="authService.logout()">{{'LOG_OUT' | translate}}</button>
+    </div>
+  </nav>
+  

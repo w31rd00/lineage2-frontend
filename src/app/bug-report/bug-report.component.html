@@ -1,0 +1,32 @@
+<div class="bug-report-box">
+    <form [formGroup]="bugReportForm" (ngSubmit)="submitBug()">
+      <h2>{{'BUG_REPORT_TITLE' | translate}}</h2>
+  
+      <div>
+        <label for="username">{{'USERNAME_LABEL' | translate}}</label>
+        <input type="text" id="username" formControlName="username" />
+      </div>
+    
+  
+      <div>
+        <label for="email">{{'EMAIL' | translate}}</label>
+        <input type="email" id="email" formControlName="email" />
+        <div class="error" *ngIf="isInvalid('email')">
+          <span *ngIf="bugReportForm.controls['email'].errors?.['required']">{{'EMAIL_REQUIRED' | translate}}</span>
+          <span *ngIf="bugReportForm.controls['email'].errors?.['email']">{{'EMAIL_VALID' | translate}}</span>
+        </div>
+      </div>
+
+
+      <div>
+        <label for="description">{{'BUG_DESCRIPTION' | translate}}</label>
+        <textarea id="description" formControlName="description"></textarea>
+        <div class="error" *ngIf="isInvalid('description')">
+          {{'BUG_DESCRIPTION_ERROR' | translate}}
+        </div>
+      </div>
+
+  
+      <button type="submit">{{'BUG_SUBMIT' | translate}}</button>
+    </form>
+</div>

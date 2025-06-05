@@ -1,0 +1,53 @@
+<div class="account-container">
+    <h2>{{ 'ACCOUNT_WELCOME_TITLE' | translate }}</h2>
+  
+    <div class="balance-box">
+      <p><strong>{{'BALANCE' | translate}}:</strong> {{ balance }}</p>
+    </div>
+  
+    <div class="add-balance-form">
+      <input type="number" [(ngModel)]="amountToAdd" min="1" placeholder="Amount to add" />
+      <button (click)="addBalance()">{{'ADD_BALANCE' | translate}}</button>
+    </div>
+
+
+    <div class="change-password-box">
+      <form [formGroup]="changePasswordForm" (ngSubmit)="changePassword()">
+        <h2>{{'CHANGE_PASSWORD_TITLE' | translate}}</h2>
+    
+        <div>
+          <label for="currentPassword">{{'CURRENT_PASSWORD_LABEL' | translate}}</label>
+          <input type="password" id="currentPassword" formControlName="currentPassword" />
+          <div class="error" *ngIf="isInvalid('currentPassword')">
+            {{'CURRENT_PASSWORD_REQUIRED' | translate}}
+          </div>
+        </div>
+      
+    
+        <div>
+          <label for="newPassword">{{'NEW_PASSWORD_LABEL' | translate}}</label>
+          <input type="password" id="newPassword" formControlName="newPassword" />
+          <div class="error" *ngIf="isInvalid('newPassword')">
+            {{'NEW_PASSWORD_REQUIRED' | translate}}
+          </div>
+        </div>
+
+
+        <div>
+          <label for="confirmNewPassword">{{'CONFIRM_NEW_PASSWORD_LABEL' | translate}}</label>
+          <input type="password" id="confirmNewPassword" formControlName="confirmNewPassword" />
+          <div class="error" *ngIf="isInvalid('confirmNewPassword')">
+            {{'CONFIRM_NEW_PASSWORD_REQUIRED' | translate}}
+          </div>
+          <div class="error" *ngIf="changePasswordForm.errors?.['passwordMismatch'] && changePasswordForm.get('confirmNewPassword')?.touched">
+            {{'NEW_PASSWORDS_DO_NOT_MATCH' | translate}}
+          </div>
+        </div>
+
+    
+        <button type="submit">{{'CHANGE_PASSWORD_SUBMIT' | translate}}</button>
+      </form>
+    </div>
+      
+</div>
+  

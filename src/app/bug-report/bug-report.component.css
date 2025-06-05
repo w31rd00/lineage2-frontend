@@ -1,0 +1,70 @@
+/* Full screen background */
+/* .change-password-box {
+    height: 100vh;
+    width: 100%;
+    background: url('../../public/Lineage2-sign-up.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  
+  /* Form box */
+  .bug-report-box {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+  }
+  
+  /* Form styles */
+  .bug-report-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .bug-report-box form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bug-report-box input {
+    margin: 8px 0;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+  }
+
+  .bug-report-box textarea {
+    margin: 8px 0;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    width: 300px;
+    height: 150px;
+  }
+  
+  .bug-report-box button {
+    margin-top: 12px;
+    padding: 10px;
+    font-size: 15px;
+    background-color: #4b79a1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .bug-report-box button:hover {
+    background-color: #3c6589;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.8rem;
+  }

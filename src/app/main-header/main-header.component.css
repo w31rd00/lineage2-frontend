@@ -1,0 +1,58 @@
+.main-header {
+    background: rgba(255, 255, 255, 0.85);
+    color: #222;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    border-bottom: 1px solid #ccc;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  /* Logo text */
+  .logo a {
+    font-size: 26px;
+    font-weight: bold;
+    color: #3a3a3a;
+    text-decoration: none;
+  }
+  
+  /* Menu links */
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .menu li a:hover {
+    color: #1a73e8;
+  }
+  
+  /* Auth buttons */
+  .auth-buttons button {
+    margin-left: 10px;
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: white;
+    border: 1px solid #bbb;
+    color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .auth-buttons button:hover {
+    background-color: #f0f0f0;
+    border-color: #999;
+  }

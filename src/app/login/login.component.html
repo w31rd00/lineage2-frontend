@@ -1,0 +1,18 @@
+<div class="sign-in-container">
+  <div class="signin-box">
+    <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+      <h2>{{'SIGN_IN_TITLE' | translate}}</h2>
+  
+      <label for="username">{{'USERNAME_LABEL' | translate}}</label>
+      <input type="text" id="username" formControlName="username" />
+  
+      <label for="password">{{'PASSWORD_LABEL' | translate}}</label>
+      <input type="password" id="password" formControlName="password" />
+
+      <p><a [routerLink]="['/forgot-password']">{{'FORGOT_PASSWORD_LABEL' | translate}}</a></p>
+  
+      <button type="submit">{{'SIGN_IN_SUBMIT' | translate}}</button>
+    </form>
+  </div>
+</div>
+  

@@ -1,0 +1,12 @@
+.top-header {
+  background: rgba(255, 255, 255, 0.6); /* semi-transparent white */
+  color: #444;
+  font-size: 13px;
+  padding: 6px 16px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-family: 'Segoe UI', sans-serif;
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid #ddd;
+}
